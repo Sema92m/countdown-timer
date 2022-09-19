@@ -1,10 +1,24 @@
-
 const daysEl = document.getElementById("days");
 const hoursEl = document.getElementById("hours");
 const minsEl = document.getElementById("minutes");
 const secondsEl = document.getElementById("seconds");
 
-const newYears = "1 Jan 2023";
+let newYears = '01 Jan 2023';
+
+//---
+document.querySelector(".btn").addEventListener("click", myClick);
+function myClick() {
+    let a = document.querySelector("input").value;
+    newYears.innerHTML = a;
+	newYears = a;
+	// console.log(`a = ${a}`);
+	// console.log(`newYears = ${newYears}`);
+    countdown();
+    setInterval(countdown, 1000);
+    
+}
+//--
+
 
 function countdown() {
     const newYearsDate = new Date(newYears);
@@ -29,5 +43,11 @@ function formatTime(time) {
 
 // initial call
 countdown();
-
 setInterval(countdown, 1000);
+
+// document.querySelector('.btn').onclick = myClick;
+// document.querySelector('.btn').addEventListener('click', myClick);
+// function myClick() {
+// 	let inputValue = document.querySelector('input').value;
+// 	document.querySelector('.out').innerHTML = inputValue;
+// }

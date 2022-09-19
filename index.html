@@ -9,7 +9,7 @@
         <title>Countdown Timer</title>
     </head>
     <body>
-        <h1>Your date</h1>
+        <h1>Time left</h1>
         <div class="countdown-container">
             <div class="countdown-el days-c">
                 <p class="big-text" id='days'>0</p>
@@ -27,6 +27,15 @@
                 <p class="big-text" id='seconds'>0</p>
                 <span>seconds</span>
             </div>
+        </div><!-- container -->
+        <div class="container">
+            <h2>↓SET DATE↓</h2>
+            <h3>Example: <span>'2 oct 2024'</span></h3>
+            <div class="user-input">
+                <input class="input" type="text" onfocus="this.value=''" value="1 Jan 2023">
+                <button class="btn">set</button>
+            </div>
+            
         </div>
         <script src="./script.js"></script>
     </body>
